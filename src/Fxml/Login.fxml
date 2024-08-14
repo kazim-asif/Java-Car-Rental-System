@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="569.0" prefWidth="565.0">
+         <children>
+            <Label layoutX="232.0" layoutY="34.0" text="Login">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Pane layoutX="54.0" layoutY="102.0" prefHeight="407.0" prefWidth="458.0" style="-fx-background-color: grey;">
+               <children>
+                  <Label layoutX="26.0" layoutY="65.0" prefHeight="20.0" prefWidth="120.0" text="UserName:" textFill="#f2efef">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="122.0" prefHeight="20.0" prefWidth="120.0" text="Password:" textFill="#f2efef">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="176.0" prefHeight="20.0" prefWidth="120.0" text="Login as: " textFill="#f2efef">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="178.0" layoutY="65.0" prefHeight="31.0" prefWidth="253.0" />
+                  <TextField fx:id="password" layoutX="178.0" layoutY="122.0" prefHeight="31.0" prefWidth="253.0" />
+                  <Button layoutX="94.0" layoutY="258.0" mnemonicParsing="false" onAction="#standardLogin" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: blue;" text="Login" textFill="#eee9e9" />
+                  <Button layoutX="258.0" layoutY="258.0" mnemonicParsing="false" onAction="#redirectToSignup" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: green;" text="Register instead" textFill="#eee9e9" />
+                  <ComboBox fx:id="logintype" layoutX="178.0" layoutY="179.0" prefHeight="25.0" prefWidth="253.0" />
+                  <Label layoutX="86.0" layoutY="346.0" prefHeight="31.0" prefWidth="72.0" text="or:" textFill="#f2efef">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="170.0" layoutY="346.0" mnemonicParsing="false" onAction="#guestLogin" prefHeight="31.0" prefWidth="135.0" text="Guest Login" textFill="#170202">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

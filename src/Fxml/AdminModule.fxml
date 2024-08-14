@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="648.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+   <children>
+      <Pane layoutX="17.0" layoutY="124.0" prefHeight="325.0" prefWidth="103.0" style="-fx-background-color: grey;">
+         <children>
+            <Button layoutX="5.0" layoutY="32.0" mnemonicParsing="false" onAction="#displayCatalogPane" prefHeight="25.0" prefWidth="88.0" text="Logistics" />
+            <Button layoutX="7.0" layoutY="69.0" mnemonicParsing="false" onAction="#displayApprovalPane" prefHeight="25.0" prefWidth="88.0" text="Approvals" />
+            <Button layoutX="7.0" layoutY="231.0" mnemonicParsing="false" onAction="#sync" prefHeight="25.0" prefWidth="88.0" text="Sync" />
+            <Button layoutX="8.0" layoutY="264.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="88.0" text="Logout" />
+         </children>
+      </Pane>
+      <Pane fx:id="CatalogPane" layoutX="130.0" layoutY="50.0" prefHeight="565.0" prefWidth="499.0" style="-fx-border-style: solid;">
+         <children>
+            <Label layoutX="170.0" layoutY="14.0" prefHeight="17.0" prefWidth="146.0" text="Logistics Information">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="namelbl2" layoutX="53.0" layoutY="49.0" prefHeight="17.0" prefWidth="146.0" text="Add Cars" />
+            <Label layoutX="210.0" layoutY="257.0" prefHeight="17.0" prefWidth="146.0" text="Available Cars">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="carsCatalog" layoutX="53.0" layoutY="274.0" prefHeight="264.0" prefWidth="406.0">
+               <columns>
+                  <TableColumn fx:id="model" prefWidth="134.0" text="Model" />
+                  <TableColumn fx:id="color" prefWidth="137.0" text="Color" />
+                  <TableColumn fx:id="plateNum" prefWidth="134.0" text="Plate Num" />
+               </columns>
+            </TableView>
+            <TextField fx:id="addCarModel" layoutX="21.0" layoutY="73.0" prefHeight="25.0" prefWidth="118.0" promptText="Model" />
+            <Button layoutX="21.0" layoutY="179.0" mnemonicParsing="false" onAction="#addCar" prefHeight="25.0" prefWidth="118.0" text="Add" />
+            <TextField fx:id="addCarColor" layoutX="21.0" layoutY="107.0" prefHeight="25.0" prefWidth="118.0" promptText="Color" />
+            <TextField fx:id="addCarPlate" layoutX="21.0" layoutY="141.0" prefHeight="25.0" prefWidth="118.0" promptText="PlateNumber" />
+            <Label fx:id="namelbl21" layoutX="193.0" layoutY="49.0" prefHeight="17.0" prefWidth="146.0" text="Update Cars" />
+            <TextField fx:id="updateCarModel" layoutX="177.0" layoutY="73.0" prefHeight="25.0" prefWidth="118.0" promptText="Model" />
+            <TextField fx:id="updateCarColor" layoutX="177.0" layoutY="107.0" prefHeight="25.0" prefWidth="118.0" promptText="Color" />
+            <Button layoutX="177.0" layoutY="179.0" mnemonicParsing="false" onAction="#updateCar" prefHeight="25.0" prefWidth="118.0" text="Update" />
+            <Label fx:id="namelbl211" layoutX="356.0" layoutY="49.0" prefHeight="17.0" prefWidth="146.0" text="Delete Cars" />
+            <Button layoutX="339.0" layoutY="107.0" mnemonicParsing="false" onAction="#deleteCar" prefHeight="25.0" prefWidth="118.0" text="Delete" />
+            <Pane layoutX="157.0" layoutY="52.0" prefHeight="197.0" prefWidth="11.0" style="-fx-background-color: grey;" />
+            <Pane layoutX="311.0" layoutY="52.0" prefHeight="197.0" prefWidth="11.0" style="-fx-background-color: grey;" />
+            <Pane layoutX="17.0" layoutY="234.0" prefHeight="17.0" prefWidth="460.0" style="-fx-background-color: grey;" />
+            <TextField fx:id="updateCarPlate" disable="true" layoutX="177.0" layoutY="141.0" prefHeight="25.0" prefWidth="118.0" promptText="PlateNumber" />
+            <TextField fx:id="deleteCarPlate" disable="true" layoutX="339.0" layoutY="73.0" prefHeight="25.0" prefWidth="118.0" promptText="PlateNumber" />
+         </children>
+      </Pane>
+      <Pane fx:id="ApprovalPane" layoutX="133.0" layoutY="53.0" prefHeight="565.0" prefWidth="477.0" style="-fx-border-style: solid;">
+         <children>
+            <Label layoutX="186.0" layoutY="14.0" prefHeight="17.0" prefWidth="146.0" text="Pending Approvals">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="detailsArea" layoutX="30.0" layoutY="304.0" prefHeight="190.0" prefWidth="437.0" />
+            <Button layoutX="176.0" layoutY="508.0" mnemonicParsing="false" onAction="#approve" prefHeight="25.0" prefWidth="136.0" text="Approve" />
+            <TableView fx:id="pendingPeservationHistory" layoutX="28.0" layoutY="66.0" prefHeight="221.0" prefWidth="437.0">
+               <columns>
+                  <TableColumn fx:id="bookingId1" prefWidth="134.0" text="Booking Id" />
+                  <TableColumn fx:id="startDate1" prefWidth="154.0" text="Start Date" />
+                  <TableColumn fx:id="status1" prefWidth="148.0" text="Status" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

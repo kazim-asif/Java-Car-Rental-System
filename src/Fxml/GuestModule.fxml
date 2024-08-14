@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onDragDetected="#logout" prefHeight="661.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GuestController">
+   <children>
+      <Pane fx:id="CatalogPane" layoutX="73.0" layoutY="48.0" prefHeight="565.0" prefWidth="499.0" style="-fx-border-style: solid;">
+         <children>
+            <Label layoutX="170.0" layoutY="14.0" prefHeight="17.0" prefWidth="146.0" text="Catalog Information">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="namelbl2" layoutX="34.0" layoutY="77.0" prefHeight="17.0" prefWidth="146.0" text="Search Cars: " />
+            <Label layoutX="189.0" layoutY="190.0" prefHeight="17.0" prefWidth="146.0" text="Available Cars">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="carsCatalog" layoutX="53.0" layoutY="234.0" prefHeight="304.0" prefWidth="406.0">
+               <columns>
+                  <TableColumn fx:id="model" prefWidth="134.0" text="Model" />
+                  <TableColumn fx:id="color" prefWidth="137.0" text="Color" />
+                  <TableColumn fx:id="plateNum" prefWidth="134.0" text="Plate Num" />
+               </columns>
+            </TableView>
+            <TextField fx:id="searchField" layoutX="129.0" layoutY="73.0" prefHeight="25.0" prefWidth="190.0" />
+            <ComboBox fx:id="searchType" layoutX="130.0" layoutY="106.0" prefHeight="25.0" prefWidth="190.0" />
+            <Label fx:id="namelbl1" layoutX="34.0" layoutY="110.0" prefHeight="17.0" prefWidth="146.0" text="Criterion:" />
+            <Button layoutX="130.0" layoutY="141.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="190.0" text="Search" />
+         </children>
+      </Pane>
+      <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="109.0" text="Logout" />
+   </children>
+</AnchorPane>
